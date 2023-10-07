@@ -653,8 +653,8 @@ public class App {
 
                 default:
 
-                    System.out.println("elegi una opcion que este en el rango de las opciones");
-                    System.out.println("Saliendo de la aplicacion");
+                    System.out.println("Fin del programa");
+                    
                     break;
             }
         }
