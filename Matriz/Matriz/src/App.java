@@ -12,29 +12,70 @@ public class App {
             System.out.println(
                     "1)Verificar si dos matrices son iguales \n 2)Sumar 2 matrices\n 3)generar una Matriz de 0 n a m\n 4)Obtener el inverso aditivo de una Matriz n a m ");
             System.out.println(
-                    "5)Restar 2 matrices\n 6)Multiplicar un escalar por una Matriz n a m \n 7)Multiplicdar 2 matrices compatibles\n 8)Matriz identidad \n 9) inversa\n 10)Determinante");
+                    "5)Restar 2 matrices\n 6)Multiplicar un escalar por una Matriz n a m \n 7)Multiplicar 2 matrices compatibles\n 8)Matriz identidad \n 9) inversa\n 10)Determinante");
 
             int elegir = lector.nextInt();
 
-            int fila1, columna1, fila2, columna2;
+            int fila1, columna1, fila2, columna2, intentos = 0, determinante, n;
 
             switch (elegir) {
                 case 1:
 
-                    System.out.println( "Para verificar si dos matrices son iguales ambas deben tener el mismo numero de\n filas b columnas");
-                   
+                    System.out.println(
+                            "Para verificar si dos matrices son iguales ambas deben tener el mismo numero de\n filas b columnas");
+
                     System.out.println("Digite cantidad de fila Matriz A");
                     fila1 = lector.nextInt();
+                    while (fila1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Digite Numero de Columna Matriz A ");
                     columna1 = lector.nextInt();
+                    while (columna1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columna de nuevo");
+                        columna1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println(" Digite numero de filas para la Matriz B");
                     fila2 = lector.nextInt();
+                    while (fila2 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila2 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Digite  numero de columnas para la Matriz B");
                     columna2 = lector.nextInt();
-                    
+                    while (columna2 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columna de nuevo");
+                        columna2 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
+
                     int matrizA[][] = new int[fila1][columna1];
                     int matrizB[][] = new int[fila2][columna2];
 
@@ -59,7 +100,8 @@ public class App {
                         for (int b = 0; b < columna1; b++) {
 
                             System.out
-                                    .println("Cual es el valor de la Matriz b : " + "[" + (a + 1) + "][" + (b + 1) + "]");
+                                    .println("Cual es el valor de la Matriz b : " + "[" + (a + 1) + "][" + (b + 1)
+                                            + "]");
                             matrizB[a][b] = lector.nextInt();
                         }
                     }
@@ -99,15 +141,55 @@ public class App {
 
                     System.out.println("Cual es el numero de filas para la Matriz a");
                     fila1 = lector.nextInt();
+                    while (fila1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es el numero de columnas para la Matriz a ");
                     columna1 = lector.nextInt();
+                    while (columna1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columnas de nuevo");
+                        columna1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es numero de filas para la Matriz b");
                     fila2 = lector.nextInt();
+                    while (fila2 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila2 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es el numero de columnas para la Matriz b");
                     columna2 = lector.nextInt();
+                    while (columna2 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columnas de nuevo");
+                        columna2 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     int matrizA1[][] = new int[fila1][columna1];
                     int matrizB1[][] = new int[fila2][columna2];
@@ -135,7 +217,8 @@ public class App {
                         for (int j = 0; j < columna1; j++) {
 
                             System.out
-                                    .println("Cual es el valor de la Matriz b : " + "[" + (i + 1) + "][" + (j + 1) + "]");
+                                    .println("Cual es el valor de la Matriz b : " + "[" + (i + 1) + "][" + (j + 1)
+                                            + "]");
                             matrizB1[i][j] = lector.nextInt();
                         }
                     }
@@ -195,9 +278,29 @@ public class App {
 
                     System.out.println("Cual es la cantidad de filas que va a tener la Matriz");
                     fila1 = lector.nextInt();
+                    while (fila1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es la cantidad de columnas que va a tener la Matriz");
                     columna1 = lector.nextInt();
+                    while (columna1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columna de nuevo");
+                        columna1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     int matrizA2[][] = new int[fila1][columna1];
 
@@ -236,9 +339,29 @@ public class App {
 
                     System.out.println("Cual es la cantidad de filas de la mnatriz");
                     fila1 = lector.nextInt();
+                    while (fila1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es la cantida de columnas para la Matriz");
                     columna1 = lector.nextInt();
+                    while (columna1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columnas de nuevo");
+                        columna1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     int matrizA3[][] = new int[fila1][columna1];
 
@@ -286,15 +409,55 @@ public class App {
 
                     System.out.println("Cual es el numero de filas para la Matriz a");
                     fila1 = lector.nextInt();
+                    while (fila1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es el numero de columnas para la Matriz a ");
                     columna1 = lector.nextInt();
+                    while (columna1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columnas de nuevo");
+                        columna1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es numero de filas para la Matriz b");
                     fila2 = lector.nextInt();
+                    while (fila2 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila2 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es el numero de columnas para la Matriz b");
                     columna2 = lector.nextInt();
+                    while (columna2 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columna de nuevo");
+                        columna2 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     int matrizA5[][] = new int[fila1][columna1];
                     int matrizB5[][] = new int[fila2][columna2];
@@ -322,7 +485,8 @@ public class App {
                         for (int j = 0; j < columna1; j++) {
 
                             System.out
-                                    .println("Cual es el valor de la Matriz b : " + "[" + (i + 1) + "][" + (j + 1) + "]");
+                                    .println("Cual es el valor de la Matriz b : " + "[" + (i + 1) + "][" + (j + 1)
+                                            + "]");
                             matrizB5[i][j] = lector.nextInt();
                         }
                     }
@@ -382,12 +546,42 @@ public class App {
 
                     System.out.println("Cual es el numero de filas para la Matriz a");
                     fila1 = lector.nextInt();
+                    while (fila1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es el numero de columnas para la Matriz a ");
                     columna1 = lector.nextInt();
+                    while (columna1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columna de nuevo");
+                        columna1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es el valor del escalar");
                     int escalar = lector.nextInt();
+                    while (escalar <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor del escalar de nuevo");
+                        escalar = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     int matrizA6[][] = new int[fila1][columna1];
 
@@ -435,15 +629,55 @@ public class App {
 
                     System.out.println("Cual es el numero de filas para la Matriz a");
                     fila1 = lector.nextInt();
+                    while (fila1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es el numero de columnas para la Matriz a ");
                     columna1 = lector.nextInt();
+                    while (columna1 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columna de nuevo");
+                        columna1 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es numero de filas para la Matriz b");
                     fila2 = lector.nextInt();
+                    while (fila2 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        fila2 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Cual es el numero de columnas para la Matriz b");
                     columna2 = lector.nextInt();
+                    while (columna2 <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columna de nuevo");
+                        columna2 = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     int matrizA7[][] = new int[fila1][columna1];
                     int matrizB7[][] = new int[fila2][columna2];
@@ -471,7 +705,8 @@ public class App {
                         for (int j = 0; j < columna1; j++) {
 
                             System.out
-                                    .println("Cual es el valor de la Matriz b : " + "[" + (i + 1) + "][" + (j + 1) + "]");
+                                    .println("Cual es el valor de la Matriz b : " + "[" + (i + 1) + "][" + (j + 1)
+                                            + "]");
                             matrizB7[i][j] = lector.nextInt();
                         }
                     }
@@ -515,15 +750,40 @@ public class App {
                         }
                         System.out.println("");
                     }
+                     System.out.println("Desea Volver el programa?(Si o No)");
+                    RESPUESTA = lector.next();
+                    if (RESPUESTA.equalsIgnoreCase("No")) {
+                        Volver = false;
+                    }
 
                     break;
 
                 case 8:
                     System.out.print("Ingrese el número de filas: ");
                     int filas = lector.nextInt();
+                    while (filas <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        filas = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.print("Ingrese el número de columnas: ");
                     int columnas = lector.nextInt();
+                    while (columnas <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columnas de nuevo");
+                        columnas = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     int[][] Matriz = new int[filas][columnas];
 
@@ -544,53 +804,120 @@ public class App {
                         }
                         System.out.println();
                     }
+                     System.out.println("Desea Volver el programa?(Si o No)");
+                    RESPUESTA = lector.next();
+                    if (RESPUESTA.equalsIgnoreCase("No")) {
+                        Volver = false;
+                    }
 
                     break;
 
                 case 9:
-                System.out.println("Ingrese elementos Matriz:");
-                int[][] Matri = new int[3][3];
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 3; j++) {
-                        Matri[i][j] = lector.nextInt();
+                    // ingrese numero de fila y columna por que la matriz debe de ser cuadrada
+                    System.out.println("Ingrese el número de filas y columnas: ");
+                    n = lector.nextInt();
+                    while (n <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        n = lector.nextInt();
                     }
-                }
-             
-                int determinant = Matri[0][0] * (Matri[1][1] * Matri[2][2] - Matri[1][2] * Matri[2][1])
-                        - Matri[0][1] * (Matri[1][0] * Matri[2][2] - Matri[1][2] * Matri[2][0])
-                        + Matri[0][2] * (Matri[1][0] * Matri[2][1] - Matri[1][1] * Matri[2][0]);
-              
-                if (determinant == 0) {
-                    System.out.println("esta matriz no es invertible.");
-                    return;
-                }
-               
-                int[][] inverseMatrix = new int[3][3];
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 3; j++) {
-                        inverseMatrix[i][j] = (1 / determinant)
-                                * (Matri[j][(i + 1) % 3] * Matri[(j + 1) % 3][(i + 2) % 3]
-                                        - Matri[j][(i + 1) % 3] * Matri[(j + 2) % 3][(i + 1) % 3]
-                                        - Matri[(j + 1) % 3][(i + 1) % 3] * Matri[j][(i + 2) % 3]);
+                    if (intentos == 3) {
+                        System.out.println("intentos maximos");
+                        break;
                     }
-                }
-             
-                System.out.println("inversa :");
-                for (int i = 0; i < 3; i++) {
-                    for (int j = 0; j < 3; j++) {
-                        System.out.print(inverseMatrix[i][j] + " ");
+                    int[][] MATRIZ1 = new int[n][n];
+                    int[][] inv = new int[n][n];
+
+                    System.out.println("Ingrese los elementos de la MATRIZ1: ");
+                    for (int i = 0; i < n; i++) {
+                        for (int j = 0; j < n; j++) {
+                            MATRIZ1[i][j] = lector.nextInt();
+                        }
                     }
-                    System.out.println();
-                }
-                   
-                break;
+
+                    determinante = 0;
+                    for (int i = 0; i < n; i++) {
+                        for (int j = 0; j < n; j++) {
+                            if (j == i) {
+                                determinante += MATRIZ1[j][i];
+                            }
+                        }
+                    }
+
+                    if (determinante != 0) {
+                        for (int i = 0; i < n; i++) {
+                            for (int j = 0; j < n; j++) {
+                                if (j != i) {
+                                    determinante -= MATRIZ1[j][i] * MATRIZ1[j][i];
+                                }
+                            }
+                        }
+
+                        for (int i = 0; i < n; i++) {
+                            for (int j = 0; j < n; j++) {
+                                if (i != j) {
+                                    determinante /= (MATRIZ1[i][i] * MATRIZ1[j][j]);
+                                }
+                            }
+                        }
+
+                        System.out.println("El determinante de la MATRIZ1 es: " + determinante);
+
+                        for (int i = 0; i < n; i++) {
+                            for (int j = 0; j < n; j++) {
+                                if (i == j) {
+                                    inv[i][j] = MATRIZ1[j][i];
+                                } else {
+                                    inv[i][j] = MATRIZ1[j][i] * MATRIZ1[i][i];
+                                }
+                            }
+                        }
+
+                        System.out.println("La MATRIZ1 es: ");
+                        for (int i = 0; i < n; i++) {
+                            for (int j = 0; j < n; j++) {
+                                System.out.print("[" + inv[i][j] + "]");
+                            }
+                            System.out.println(" ");
+                        }
+                    } else {
+                        System.out.println("No tiene inversa.");
+                    }
+                     System.out.println("Desea Volver el programa?(Si o No)");
+                    RESPUESTA = lector.next();
+                    if (RESPUESTA.equalsIgnoreCase("No")) {
+                        Volver = false;
+                    }
+
+                    break;
                 case 10:
 
                     System.out.println("Ingrese el número de filas de la matriz:");
                     filas = lector.nextInt();
+                    while (filas <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las filas de nuevo");
+                        filas = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     System.out.println("Ingrese el número de columnas de la matriz:");
                     columnas = lector.nextInt();
+                    while (columnas <= 0 && intentos < 3) {
+                        intentos++;
+                        System.out.println("No se puedes digitar numeros negativos");
+                        System.out.println("Digite el valor de las columnas de nuevo");
+                        columnas = lector.nextInt();
+                    }
+                    if (intentos == 3) {
+                        System.out.println("Ha intentado muchas veces, regresa mas tarde");
+                        break;
+                    }
 
                     if (filas != columnas) {
                         System.out.println("La matriz no es cuadrada. Debe tener el mismo número de filas b columnas.");
@@ -648,13 +975,18 @@ public class App {
                     if (RESPUESTA.equalsIgnoreCase("No")) {
                         Volver = false;
                     }
+                     System.out.println("Desea Volver el programa?(Si o No)");
+                    RESPUESTA = lector.next();
+                    if (RESPUESTA.equalsIgnoreCase("No")) {
+                        Volver = false;
+                    }
 
                     break;
 
                 default:
 
                     System.out.println("Fin del programa");
-                    
+
                     break;
             }
         }
